@@ -9,6 +9,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,300;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+.think-callout {
+  background: var(--color-bg-alt);
+  border-left: 4px solid var(--color-purple-bright);
+  padding: 24px 28px;
+  margin: 8px 0 0 0;
+  border-radius: 0 8px 8px 0;
+}
+.think-callout p {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-white);
+  line-height: 1.5;
+  margin: 0;
+}
+.think-stat-inline {
+  display: inline-flex;
+  flex-direction: column;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-purple-bright);
+  border-radius: 0 8px 8px 0;
+  padding: 16px 24px;
+  margin: 8px 0 0 0;
+}
+.think-stat-inline .stat-num { font-size: 2.2rem; font-weight: 800; color: var(--color-purple-bright); line-height: 1; }
+.think-stat-inline .stat-lbl { font-size: 0.78rem; color: var(--color-meta); margin-top: 6px; max-width: 340px; line-height: 1.5; }
+.think-inline-photo {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  margin: 28px 0;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+</style>
 </head>
 <body>
 <div id="reading-progress"></div>
@@ -32,9 +72,9 @@
   <div class="hero-orb hero-orb-2"></div>
   <div class="hero-inner" style="grid-template-columns: 1fr;">
     <div class="hero-content">
-      <div class="hero-eyebrow anim">How I Think</div>
-      <h1 class="hero-name anim" data-delay="0.1">The operating system.</h1>
-      <p class="hero-sub anim" data-delay="0.2" style="max-width:660px;">A direct explanation of how I approach problems, why I approach them that way, and where those habits come from.</p>
+      <div class="hero-eyebrow anim">The Framework</div>
+      <h1 class="hero-name anim" data-delay="0.1">How I Think.</h1>
+      <p class="hero-sub anim" data-delay="0.2" style="max-width:660px;">Five principles. Every decision I've made runs through at least one of them.</p>
     </div>
   </div>
 </section>
@@ -59,6 +99,10 @@
         <p>I've spent fifteen years building the other kind.</p>
       </div>
 
+      <div class="think-callout anim">
+        <p>"I've spent fifteen years building the other kind."</p>
+      </div>
+
       <div class="think-section anim">
         <div class="think-label">Preparation</div>
         <h2 class="think-heading">I don't walk into a room with one plan.</h2>
@@ -72,6 +116,7 @@
         <h2 class="think-heading">Build the thing worth building.</h2>
         <p>I built the desk I work at. I built the table my family eats dinner on — over a long weekend, because my wife said it couldn't be done in a weekend. Eight years later, it's still our table.</p>
         <p>I don't build fast and disposable. I build things designed to still be standing years later, whether that's a data warehouse, a kitchen table, or a public health AI platform. The question I ask before I start any project is the same one I ask in my woodshop: is this worth building? If the answer is yes, I'm going to build it right. No shortcuts that create future failures. No workarounds that someone else has to clean up.</p>
+        <img src="assets/images/whiteboard.jpeg" class="think-inline-photo" alt="Jefferson at the whiteboard">
       </div>
 
       <div class="think-section anim">
@@ -80,6 +125,11 @@
         <p>Early in my career, I learned that a person's zip code is a better predictor of their health outcomes than almost anything else. That reframed how I think about every system I build. Equity isn't something you add at the end to comply with requirements. It's a constraint you design around from the beginning — or you've already failed the people who need the system most.</p>
         <p>At Lake County, designing the AllVax system meant working with church groups, Latinx community leaders, and disability advocates before we wrote a line of code. It meant building multilingual, ADA-accessible, screen-reader compatible from day one — not because a compliance checklist required it, but because the alternative was a system that worked for some people and not others.</p>
         <p>The systems that serve everyone require you to design for the people most likely to fall through the cracks. That's where I start.</p>
+      </div>
+
+      <div class="think-stat-inline anim">
+        <div class="stat-num">40%</div>
+        <div class="stat-lbl">reduction in COVID death disparities between Black, white, and Hispanic residents — Lake County, 2021</div>
       </div>
 
     </div>

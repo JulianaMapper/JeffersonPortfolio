@@ -9,6 +9,174 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* ── THROUGH-LINE SECTION ──────────────────────────────────────── */
+.throughline {
+  padding: 80px 24px;
+  background: var(--color-bg);
+}
+.throughline-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.throughline-kicker {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-secondary);
+  margin-bottom: 16px;
+}
+.throughline-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 2.8vw, 2rem);
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+.throughline-headline em {
+  font-style: italic;
+  color: var(--color-secondary);
+}
+.throughline-body p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+.throughline-body p:last-child { margin-bottom: 0; }
+.throughline-arc {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.arc-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.arc-step:last-child { border-bottom: none; }
+.arc-marker {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-bg-alt);
+  border: 2px solid var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+.arc-connector {
+  position: relative;
+}
+.arc-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+.arc-text {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+.arc-text strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.throughline-quote {
+  margin-top: 40px;
+  background: var(--color-bg-alt);
+  border-left: 4px solid var(--color-accent);
+  border-radius: 0 6px 6px 0;
+  padding: 24px 24px 24px 28px;
+}
+.throughline-quote blockquote {
+  font-family: var(--font-serif);
+  font-size: 0.97rem;
+  font-style: italic;
+  color: var(--color-primary);
+  line-height: 1.65;
+}
+
+/* ── PRESS BAR ─────────────────────────────────────────────────── */
+.press-bar {
+  background: var(--color-bg-alt);
+  border-top: 2px solid var(--color-border);
+  padding: 40px 24px;
+}
+.press-bar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+.press-bar-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-secondary);
+  text-align: center;
+  margin-bottom: 28px;
+}
+.press-bar-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.press-bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 28px;
+  border-right: 1px solid var(--color-border);
+}
+.press-bar-item:last-child { border-right: none; }
+.press-bar-name {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.press-bar-context {
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-meta);
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .throughline-inner { grid-template-columns: 1fr; gap: 48px; }
+  .press-bar-item { padding: 10px 16px; }
+  .press-bar-logos { gap: 0; }
+}
+@media (max-width: 540px) {
+  .press-bar-item { border-right: none; border-bottom: 1px solid var(--color-border); width: 100%; align-items: flex-start; padding: 12px 0; }
+  .press-bar-item:last-child { border-bottom: none; }
+}
+</style>
 </head>
 <body>
 
@@ -33,7 +201,7 @@
       <div class="hero-eyebrow">Health IT Executive · Cloud Architect · Public Health Leader</div>
       <h1 class="hero-name">Jefferson McMillan-Wilhoit</h1>
       <div class="hero-credentials">MPH · MPA · CHCIO · CDH-E</div>
-      <p class="hero-thesis">Health IT executive and cloud architect who has led the systems communities depend on — and built them from scratch when they didn't exist.</p>
+      <p class="hero-thesis">He finds where systems fail people, then builds something to fix it.</p>
       <p class="hero-sub">CHCIO-certified executive with 15+ years across aviation safety, pediatric health systems, enterprise EHR, public health CIO leadership, and AI infrastructure. One of the few in health IT who has both run the department and personally built the infrastructure it runs on.</p>
       <div class="hero-actions">
         <a href="built.html" class="btn btn-primary">See the Work</a>
@@ -42,7 +210,7 @@
       </div>
     </div>
     <img
-      src="https://cdn.fandtlabs.com/wp-content//uploads/2025/12/04142124/Jefferson-McMillan-Wilhoit-Jefferson-McMillan-Jefferson-FT-Labs.png"
+      src="https://cdn.fandtlabs.com/wp-content//uploads/2025/12/04142124/Jefferson-McMillan-Jefferson-FT-Labs.png"
       alt="Jefferson McMillan-Wilhoit"
       class="hero-photo"
     >
@@ -61,8 +229,8 @@
       <div class="metric-label">Reduction in COVID<br>death disparities</div>
     </div>
     <div class="metric-item">
-      <div class="metric-number">0%</div>
-      <div class="metric-label">Undesirable turnover<br>across 5 teams built from scratch</div>
+      <div class="metric-number">BT150</div>
+      <div class="metric-label">Constellation Research<br>Business Transformation Honoree</div>
     </div>
     <div class="metric-item">
       <div class="metric-number">25yr</div>
@@ -70,6 +238,59 @@
     </div>
   </div>
 </div>
+
+<!-- THROUGH-LINE -->
+<section class="throughline">
+  <div class="throughline-inner">
+    <div class="throughline-body">
+      <div class="throughline-kicker">The through line</div>
+      <h2 class="throughline-headline">One question has driven<br>every role: <em>who is the<br>system failing?</em></h2>
+      <p>Jefferson trained as an aeronautics engineer. He learned to ask not what failed, but who was in the cockpit when it did — and why the system let it happen.</p>
+      <p>That question followed him through pediatric informatics at Children's National, enterprise data architecture at Northwestern Medicine, CIO leadership through COVID at Lake County, and building a HIPAA-compliant AI platform from scratch.</p>
+      <p>Every project starts the same way: find the gap between what the system does and what the person in front of it actually needs. Then close it.</p>
+      <div class="throughline-quote">
+        <blockquote>"The clinical data told me what happened to each child. The map told me why it kept happening. Those are two different questions — and only one of them lets you actually stop it."</blockquote>
+      </div>
+    </div>
+    <div class="throughline-arc">
+      <div class="arc-step">
+        <div class="arc-marker">01</div>
+        <div>
+          <div class="arc-label">Embry-Riddle · Aviation Safety</div>
+          <div class="arc-text">Trained in human factors and accident analysis. Learned that most system failures have a human at the center — and a design that failed them first.</div>
+        </div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-marker">02</div>
+        <div>
+          <div class="arc-label">Children's National · Pediatric Informatics</div>
+          <div class="arc-text">GIS mapping of burn injuries traced a pattern to <strong>a single landlord</strong>. Data didn't just describe the problem — it named it. Patent awarded.</div>
+        </div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-marker">03</div>
+        <div>
+          <div class="arc-label">Northwestern Medicine · Enterprise Analytics</div>
+          <div class="arc-text">Unified <strong>4 EHR systems across 21 care sites</strong>. The harder problem wasn't the databases — it was 21 teams with 21 different ideas of what "good data" meant.</div>
+        </div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-marker">04</div>
+        <div>
+          <div class="arc-label">Lake County Health Dept · CIO & CDO</div>
+          <div class="arc-text">Built AllVax in 8 weeks on Salesforce. <strong>40K registrations in 24 hours. 40% reduction in COVID death disparities.</strong> GovTech. ABC7. BT150.</div>
+        </div>
+      </div>
+      <div class="arc-step">
+        <div class="arc-marker">05</div>
+        <div>
+          <div class="arc-label">F&T Labs · Founder & CEO</div>
+          <div class="arc-text">Built PH360 — a 7-layer, HIPAA-compliant, multi-tenant AI platform on AWS — because the market didn't have what public health agencies needed. <strong>$22K → $500K+ in year one.</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- HUB NAV -->
 <div class="section--alt">
@@ -98,6 +319,35 @@
         <div class="hub-card-desc">Two-page executive resume and full CV. Every credential, every role, every layer of the stack.</div>
         <div class="hub-card-arrow">Download →</div>
       </a>
+    </div>
+  </div>
+</div>
+
+<!-- PRESS BAR -->
+<div class="press-bar">
+  <div class="press-bar-inner">
+    <div class="press-bar-label">As seen in &amp; recognized by</div>
+    <div class="press-bar-logos">
+      <div class="press-bar-item">
+        <div class="press-bar-name">GovTech</div>
+        <div class="press-bar-context">Featured coverage<br>AllVax</div>
+      </div>
+      <div class="press-bar-item">
+        <div class="press-bar-name">ABC7 Chicago</div>
+        <div class="press-bar-context">News feature<br>COVID equity</div>
+      </div>
+      <div class="press-bar-item">
+        <div class="press-bar-name">State Tech</div>
+        <div class="press-bar-context">Magazine feature<br>public health IT</div>
+      </div>
+      <div class="press-bar-item">
+        <div class="press-bar-name">Constellation BT150</div>
+        <div class="press-bar-context">Business Transformation<br>Honoree</div>
+      </div>
+      <div class="press-bar-item">
+        <div class="press-bar-name">Salesforce</div>
+        <div class="press-bar-context">Featured customer<br>Health Cloud</div>
+      </div>
     </div>
   </div>
 </div>

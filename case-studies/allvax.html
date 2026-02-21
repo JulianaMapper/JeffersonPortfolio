@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AllVax Case Study — Jefferson McMillan-Wilhoit</title>
+<title>AllVax — Jefferson McMillan-Wilhoit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
@@ -16,11 +16,11 @@
     <span class="nav-logo">Jefferson McMillan-Wilhoit</span>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
+      <li><a href="../built.html" class="active">What I've Built</a></li>
+      <li><a href="../thinking.html">How I Think</a></li>
       <li><a href="../about.html">About</a></li>
-      <li><a href="../case-studies.html" class="active">Case Studies</a></li>
       <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../speaking.html">Speaking & Media</a></li>
-      <li><a href="../contact.html" class="nav-cta">Talk to Me</a></li>
+      <li><a href="../contact.html" class="nav-cta">Let's Talk</a></li>
     </ul>
   </div>
 </nav>
@@ -28,8 +28,8 @@
 <section class="case-hero">
   <div class="section-inner">
     <div class="case-eyebrow">Case Study · Public Health · Vaccine Technology · Equity Design</div>
-    <h1 class="case-headline">AllVax: Nation's Leading Vaccine Orchestration Platform</h1>
-    <p class="case-deck">A county health department. An 8-week deadline. A pandemic. How Jefferson designed and built a vaccine scheduling system that logged 40,000 registrations in 24 hours — with equity as the design constraint, not the afterthought.</p>
+    <h1 class="case-headline">AllVax: Designing a Vaccine System When Equity Is the Constraint</h1>
+    <p class="case-deck">A county health department. An 8-week deadline. A pandemic. I designed the system with equity as the constraint — not the feature. Community co-design with church groups and disability advocates before a line of code was written. 40,000 registrations in 24 hours.</p>
   </div>
 </section>
 
@@ -37,19 +37,19 @@
   <div class="case-meta-inner">
     <div class="case-meta-item">
       <div class="case-meta-label">Organization</div>
-      <div class="case-meta-value">Lake County Health Department & CHC</div>
+      <div class="case-meta-value">Lake County Health Department and Community Health Center</div>
     </div>
     <div class="case-meta-item">
       <div class="case-meta-label">Role</div>
-      <div class="case-meta-value">CIO & CDO — Architect of Record</div>
-    </div>
-    <div class="case-meta-item">
-      <div class="case-meta-label">Timeline</div>
-      <div class="case-meta-value">8 weeks concept to live, 2020–2021</div>
+      <div class="case-meta-value">CIO & CDO</div>
     </div>
     <div class="case-meta-item">
       <div class="case-meta-label">Platform</div>
-      <div class="case-meta-value">Salesforce Customer 360 for Government</div>
+      <div class="case-meta-value">Salesforce Customer 360 for Government — Experience, Health, Marketing, MuleSoft, Tableau, Shield</div>
+    </div>
+    <div class="case-meta-item">
+      <div class="case-meta-label">Timeline</div>
+      <div class="case-meta-value">8 weeks concept to live · 2020–2022</div>
     </div>
   </div>
 </div>
@@ -60,86 +60,91 @@
     <div class="case-stats-row">
       <div class="case-stat-box">
         <div class="stat-num">40K</div>
-        <div class="stat-lbl">registrations in the first 24 hours</div>
-      </div>
-      <div class="case-stat-box">
-        <div class="stat-num">200K+</div>
-        <div class="stat-lbl">signups in the first weeks — 25% of county population</div>
+        <div class="stat-lbl">community members registered in first 24 hours</div>
       </div>
       <div class="case-stat-box">
         <div class="stat-num">40%</div>
-        <div class="stat-lbl">reduction in COVID-19 death disparities in one year</div>
+        <div class="stat-lbl">reduction in COVID-19 death disparities between Black, white, and Hispanic residents in one year</div>
+      </div>
+      <div class="case-stat-box">
+        <div class="stat-num">8 wks</div>
+        <div class="stat-lbl">concept to live system</div>
       </div>
     </div>
 
     <div class="case-body-section">
       <h2>The Problem</h2>
-      <p>In late 2020, Lake County Health Department faced a challenge shared by every public health agency in the country: how do you equitably distribute a limited supply of COVID-19 vaccines to a county of 700,000 people — including communities that historically don't trust government systems, can't navigate complex digital interfaces, or don't have reliable internet access?</p>
-      <p>The existing systems weren't built for this. Most scheduling platforms assumed digital literacy, English fluency, and internet access. They were designed for people who already had a relationship with the healthcare system — not for the communities that needed the vaccine most urgently.</p>
-      <p>As CIO and CDO, Jefferson's job was to build something better. Fast.</p>
+      <p>A pandemic arrived and Lake County had no infrastructure to register, schedule, and distribute vaccines equitably to a diverse population of hundreds of thousands. Beyond the immediate crisis, the problem was structural: the communities that most needed protection — Latinx residents, Black residents, people with disabilities, those without internet access — were exactly the communities most likely to be failed by a standard registration system built for the majority.</p>
+      <p>The standard approach would have been to stand up a scheduling portal as fast as possible and fix the equity gaps later. I made a different decision.</p>
     </div>
 
     <div class="case-body-section">
-      <h2>The Approach: Equity as the Design Constraint</h2>
-      <p>Jefferson's first decision was a values decision: equity would be the design constraint, not a feature added at the end. That meant co-designing the platform with the communities it was meant to serve before a single line of code was written.</p>
-      <p>Jefferson and his team partnered with church groups, Latinx community leaders, and disability advocates — not to satisfy a checkbox, but because those communities knew things about their own barriers that no product manager at a tech company would ever discover in a user research session.</p>
-      <p>What they heard: people were scared of government data collection. They needed to register in their own language. They needed to be able to use the system on a touchscreen in freezing temperatures with gloves on. They needed a reason to trust that their information would be used to help them, not surveilled.</p>
-      <p>Every one of those requirements became a specification.</p>
-    </div>
-
-    <div class="case-callout">
-      <div class="callout-number">"We wanted to breed trust with our community. People see a large government entity trying to collect a whole bunch of information on them and they get very scared very quickly."</div>
-      <div class="callout-label">— Jefferson McMillan-Wilhoit, quoted in Slalom customer story</div>
+      <h2>The Decision</h2>
+      <p>I designed the system with equity as the design constraint from the beginning — not as a compliance requirement, not as an afterthought, but as the primary architectural forcing function. Before we wrote a line of code, we ran a community co-design process with church groups, Latinx community leaders, and disability advocates.</p>
+      <p>The questions that process surfaced shaped the system: What happens if someone doesn't have a smartphone? What happens if the registration form only exists in English? What happens if the scheduling system isn't screen-reader compatible? Building it right the first time was harder and slower. But it meant the system actually worked for the people who needed it most.</p>
+      <p>I also built to scale from day one — knowing that other communities would need this model, and that the architecture needed to support it.</p>
     </div>
 
     <div class="case-body-section">
-      <h2>The Build</h2>
-      <p>Jefferson selected and architected the AllVax platform on Salesforce Customer 360 for Government — leveraging Experience Cloud, Health Cloud, Marketing Cloud, MuleSoft, Tableau, and Shield in an integrated configuration purpose-built for public health equity.</p>
-      <p>The system was built in 8 weeks from concept to live. Key capabilities included:</p>
-      <ul style="padding-left:20px; margin:16px 0; font-size:15px; line-height:1.8; color:#2E2E2E;">
-        <li><strong>Multilingual interface</strong> — available in multiple languages at launch</li>
-        <li><strong>ADA-accessible design</strong> — screen reader compatible; touchscreen-optimized for cold-weather use</li>
-        <li><strong>Automated state/federal reporting</strong> via MuleSoft — eliminated manual data entry entirely</li>
-        <li><strong>Real-time equity monitoring</strong> via Tableau — allowed the team to identify and correct disparities in vaccination rates in near-real-time</li>
-        <li><strong>Privacy-forward data model</strong> — designed to collect only what was necessary, communicated clearly to registrants</li>
+      <h2>What I Built</h2>
+      <p>AllVax Portal — a comprehensive vaccine orchestration platform on Salesforce Customer 360 for Government. The platform integrated Experience Cloud for the public-facing registration and scheduling interface, Health Cloud for patient and vaccination record management, Marketing Cloud for multilingual outreach, MuleSoft for automated state and federal reporting integration, Tableau for real-time inventory and equity monitoring, and Shield for HIPAA-compliant data protection.</p>
+      <p>The system was multilingual, ADA-accessible, and screen-reader compatible from launch. It automated real-time reporting to state and federal systems via MuleSoft, eliminating manual data entry and the errors that came with it. Tableau dashboards gave leadership and the public a real-time view of vaccination rates and equity gaps — the same dashboard was viewed 2 million times in the first year.</p>
+    </div>
+
+    <div class="case-body-section">
+      <h2>The Result</h2>
+      <ul>
+        <li><strong>40,000 community members registered in the first 24 hours</strong> — 200K+ in first weeks, reaching 25% of county population</li>
+        <li><strong>40% reduction in COVID-19 death disparities</strong> between Black, white, and Hispanic residents in one year</li>
+        <li>Lake County was the last county in Illinois to experience its first COVID-19 death</li>
+        <li>2 million+ views of the COVID data dashboard in one year</li>
+        <li>250% increase in participatory decision-making among historically underrepresented communities</li>
+        <li>75 community partners engaged in the community health improvement framework</li>
+        <li>Constellation Research Business Transformation 150 Honoree (2022)</li>
       </ul>
     </div>
 
-    <div class="case-body-section">
-      <h2>The Outcome</h2>
-      <p>40,000 community members registered in the first 24 hours. 200,000+ in the first weeks — 25% of the county's entire population. Lake County was the last county in Illinois to record its first COVID-19 death, a testament to the speed and strategic coordination of the department's pandemic response.</p>
-      <p>Within one year, COVID-19 death disparities between Black, white, and Hispanic residents were reduced by 40%. Participation in health decision-making among historically underrepresented communities increased by 250%.</p>
-      <p>The story earned national coverage in State Tech Magazine, GovTech, and ABC News Chicago. Jefferson was quoted extensively on the equity design philosophy and the technology approach.</p>
+    <div class="callout-quote">
+      <blockquote>"Our cloud-based AllVax system enables us to shield our community and employees from some of the difficult logistical pieces of the vaccination process to focus and execute on our core mission."</blockquote>
+      <cite>— Jefferson McMillan-Wilhoit, quoted in GovTech, January 2021</cite>
     </div>
 
     <div class="case-body-section">
-      <h2>What This Shows</h2>
-      <p>AllVax is the clearest illustration of what it looks like when an operator builds something. Jefferson wasn't a consultant parachuted in to implement a vendor's platform. He was the CIO who understood the community, defined the equity requirements, selected the architecture, managed the team, and was accountable for the outcome when the system went live at midnight.</p>
-      <p>That's a different kind of ownership than most technology leaders ever experience — and it's the foundation of everything he builds now.</p>
-    </div>
-
-    <div style="margin-top:40px; padding-top:32px; border-top:1.5px solid #D8D0E8; display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="ph360.html" class="btn btn-primary">Next: PH360 Case Study →</a>
-      <a href="../case-studies.html" class="btn btn-secondary">All Case Studies</a>
+      <h2>Recognition</h2>
+      <ul>
+        <li>Constellation Research Business Transformation 150 Honoree (2022)</li>
+        <li>GovTech — featured in Salesforce Vaccine Cloud national launch coverage (January 2021)</li>
+        <li>State Tech Magazine — "Collaboration Tools Connect Health Agencies Working Remotely in a Crisis"</li>
+        <li>Salesforce Customer 360 for Government — featured customer success story</li>
+        <li>Slalom — "Responding to a Crisis, Building Trust for the Future"</li>
+        <li>ABC News Chicago — health equity coverage</li>
+      </ul>
     </div>
 
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-name">Jefferson McMillan-Wilhoit</div>
-    <ul class="footer-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../case-studies.html">Case Studies</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../speaking.html">Speaking</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-    <div class="footer-copy">© 2026 Jefferson McMillan-Wilhoit</div>
+<div class="section--alt">
+  <div class="section-inner">
+    <div class="section-label">Next</div>
+    <h2 class="section-title">What came next.</h2>
+    <div class="hub-grid">
+      <a href="ftlabs.html" class="hub-card">
+        <div class="hub-card-title">F&T Labs / PH360</div>
+        <div class="hub-card-desc">AllVax showed me what public health infrastructure needed to be. PH360 is what I built when I had the freedom to start from scratch.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+      <a href="northwestern.html" class="hub-card">
+        <div class="hub-card-title">Northwestern EHR</div>
+        <div class="hub-card-desc">4 systems. 21 locations. A different kind of integration challenge.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+    </div>
   </div>
-</footer>
+</div>
 
+<footer class="site-footer">
+  <p>Jefferson McMillan-Wilhoit, MPH, MPA, CHCIO, CDH-E · <a href="mailto:jefferson@fandtlabs.com">jefferson@fandtlabs.com</a></p>
+</footer>
 </body>
 </html>

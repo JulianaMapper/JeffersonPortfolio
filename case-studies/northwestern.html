@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northwestern Case Study — Jefferson McMillan-Wilhoit</title>
+<title>Northwestern EHR Integration — Jefferson McMillan-Wilhoit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
@@ -16,20 +16,20 @@
     <span class="nav-logo">Jefferson McMillan-Wilhoit</span>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
+      <li><a href="../built.html" class="active">What I've Built</a></li>
+      <li><a href="../thinking.html">How I Think</a></li>
       <li><a href="../about.html">About</a></li>
-      <li><a href="../case-studies.html" class="active">Case Studies</a></li>
       <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../speaking.html">Speaking & Media</a></li>
-      <li><a href="../contact.html" class="nav-cta">Talk to Me</a></li>
+      <li><a href="../contact.html" class="nav-cta">Let's Talk</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="case-hero">
   <div class="section-inner">
-    <div class="case-eyebrow">Case Study · EHR Integration · Data Warehouse · Change Management</div>
-    <h1 class="case-headline">Northwestern: Unifying Four EHR Systems Across 21 Sites</h1>
-    <p class="case-deck">One of the most complex health system data integrations in the region. The challenge wasn't just technical — it was organizational. How Jefferson built the data strategy and the reporting platform that unified it all.</p>
+    <div class="case-eyebrow">Case Study · EHR Integration · Enterprise Data Warehouse · Change Management</div>
+    <h1 class="case-headline">Northwestern: Unifying Four EHR Systems Across 21 Care Sites</h1>
+    <p class="case-deck">One of the most complex health system data integrations in the region. Four separate EHR instances. 21 care locations. No unified view of the enterprise. The challenge wasn't just technical — it was organizational. This is how you build the data strategy that makes a health system legible to itself.</p>
   </div>
 </section>
 
@@ -37,15 +37,15 @@
   <div class="case-meta-inner">
     <div class="case-meta-item">
       <div class="case-meta-label">Organization</div>
-      <div class="case-meta-value">Northwestern University</div>
+      <div class="case-meta-value">Northwestern Medicine</div>
     </div>
     <div class="case-meta-item">
       <div class="case-meta-label">Role</div>
       <div class="case-meta-value">Manager, Healthcare Analytics</div>
     </div>
     <div class="case-meta-item">
-      <div class="case-meta-label">Scale</div>
-      <div class="case-meta-value">4 EHR systems · 21 care locations</div>
+      <div class="case-meta-label">Systems</div>
+      <div class="case-meta-value">4 Epic EHR instances · Tableau · Enterprise Data Warehouse</div>
     </div>
     <div class="case-meta-item">
       <div class="case-meta-label">Timeline</div>
@@ -60,64 +60,77 @@
     <div class="case-stats-row">
       <div class="case-stat-box">
         <div class="stat-num">4</div>
-        <div class="stat-lbl">separate EHR systems unified</div>
+        <div class="stat-lbl">Epic EHR instances consolidated into one data architecture</div>
       </div>
       <div class="case-stat-box">
         <div class="stat-num">21</div>
-        <div class="stat-lbl">care locations brought onto one data strategy</div>
+        <div class="stat-lbl">care locations now operating from a single data picture</div>
       </div>
       <div class="case-stat-box">
         <div class="stat-num">1</div>
-        <div class="stat-lbl">reporting portal — organization-wide data access for everyone</div>
+        <div class="stat-lbl">portal — every member of the organization with data access</div>
       </div>
     </div>
 
     <div class="case-body-section">
       <h2>The Problem</h2>
-      <p>Northwestern's health network had grown through acquisition and affiliation — the natural result of a major academic medical center expanding its footprint across the Chicago region. The consequence was a fragmented data landscape: four different EHR systems, across 21 care locations, with no shared data model and no unified way for leadership, clinicians, or administrators to understand what was happening across the full system.</p>
-      <p>The problem wasn't unique. Almost every large health network that grew through acquisition faced the same thing. But the complexity at Northwestern — the scale, the number of systems, the organizational change management required — made it one of the most demanding integration challenges in the region.</p>
+      <p>Northwestern Medicine was running four separate Epic EHR instances across 21 care locations. Each instance had its own data model, its own reporting structure, and its own definition of core clinical concepts. A clinician at one location had no unified view of a patient's history across the system. A health system administrator couldn't see across the enterprise without manually assembling data from four different sources.</p>
+      <p>This is a common problem in health systems that have grown through acquisition. The technical complexity is real. But the harder problem is organizational — every team has built workflows around their local data model, and unification threatens those workflows even when it improves them.</p>
     </div>
 
     <div class="case-body-section">
-      <h2>The Approach</h2>
-      <p>Jefferson's first insight was that the problem wasn't primarily technical. The technology to build an enterprise data warehouse existed. The harder challenge was organizational: getting 21 care locations, each with their own workflows, their own data definitions, and their own institutional identities, to agree on a shared data model.</p>
-      <p>He built the data warehouse strategy from the outside in — starting with the questions that leadership and clinicians needed to answer, not with the data that happened to be available. What does a clinical leader need to see to manage population health across 21 locations? What does an administrator need to understand operational performance? What does a quality officer need to track outcomes? Those questions defined the data model. The technical integration followed.</p>
+      <h2>The Decision</h2>
+      <p>I led the strategy to build a unified enterprise data warehouse rather than attempting piecemeal integration of the four systems. Piecemeal integration produces a patchwork that nobody fully trusts — you end up with four sources of truth instead of one, just with bridges between them that break.</p>
+      <p>The harder decision was about access. The default approach to enterprise data warehouses is to make them the province of analysts — data goes in, reports come out, and frontline staff interact with a dashboard they didn't design and can't interrogate. I pushed for a different model: a single reporting portal with a user-facing experience designed for non-technical staff. The goal was to make every member of the organization a data user, not just a data consumer.</p>
+      <p>That meant significant organizational change management alongside the technical build — working with clinical and administrative leaders across 21 locations who had different needs, different vocabularies, and different levels of data fluency.</p>
     </div>
 
     <div class="case-body-section">
-      <h2>The Reporting Platform</h2>
-      <p>The data warehouse alone wasn't sufficient — Jefferson also led development of an organization-wide reporting portal that made the unified data accessible to every level of the organization. The portal integrated Tableau with custom search functionality and a user experience designed for non-technical users.</p>
-      <p>The goal was self-service analytics: a department head should be able to answer their own operational questions without waiting for a data analyst to run a report. A clinical leader should be able to track their population health metrics in real time. That required both technical architecture and significant user experience design — making complex data accessible to people who hadn't been trained to use it.</p>
+      <h2>What I Built</h2>
+      <p>An enterprise data warehouse strategy that consolidated all four Epic instances under a single data architecture — with a consistent data model, unified definitions for clinical and operational metrics, and a single source of truth for enterprise reporting.</p>
+      <p>A Tableau-integrated reporting portal with a custom user interface designed for non-technical staff. The goal was to make the data accessible enough that a department manager — not a data analyst — could answer their own operational questions without filing a report request. Search functionality, role-based access, and a design philosophy that prioritized legibility over completeness.</p>
+      <p>The organizational change management was as important as the technical architecture. Working with clinical leaders, department managers, and frontline staff across the system to understand what data they needed, why their current workflows existed, and how the new architecture could actually improve them rather than just disrupt them.</p>
     </div>
 
     <div class="case-body-section">
-      <h2>What This Shows</h2>
-      <p>The Northwestern engagement is the clearest example in Jefferson's career of the distinction between technical complexity and organizational complexity — and his ability to navigate both simultaneously. The data warehouse was a significant technical achievement. The organizational change management required to get 21 locations aligned around a shared data model was harder.</p>
-      <p>Jefferson has operated at the intersection of those two challenges — technical architecture and organizational alignment — throughout his career. It's the combination that makes health IT transformation actually work, as opposed to producing technically correct systems that nobody uses.</p>
+      <h2>The Result</h2>
+      <ul>
+        <li><strong>4 EHR systems and 21 care locations</strong> unified under one data architecture and one reporting platform</li>
+        <li>Every member of the organization gained data access through a single, user-designed portal — not just analysts</li>
+        <li>Foundation laid for enterprise-wide analytics capability that subsequent data leadership could build on</li>
+        <li>Organizational change management completed across a geographically distributed, multi-speciality health system</li>
+      </ul>
     </div>
 
-    <div style="margin-top:40px; padding-top:32px; border-top:1.5px solid #D8D0E8; display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="allvax.html" class="btn btn-primary">← Back to AllVax</a>
-      <a href="../case-studies.html" class="btn btn-secondary">All Case Studies</a>
+    <div class="callout-quote">
+      <blockquote>"The technical problem at Northwestern wasn't integrating four databases. The technical problem was building something that 21 different care teams — with 21 different sets of workflows and expectations — would actually use. The database was the easier part."</blockquote>
+      <cite>— Jefferson McMillan-Wilhoit</cite>
     </div>
 
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-name">Jefferson McMillan-Wilhoit</div>
-    <ul class="footer-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../case-studies.html">Case Studies</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../speaking.html">Speaking</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-    <div class="footer-copy">© 2026 Jefferson McMillan-Wilhoit</div>
+<div class="section--alt">
+  <div class="section-inner">
+    <div class="section-label">Continue</div>
+    <h2 class="section-title">More of the work.</h2>
+    <div class="hub-grid">
+      <a href="allvax.html" class="hub-card">
+        <div class="hub-card-title">AllVax — Lake County</div>
+        <div class="hub-card-desc">From enterprise EHR to public health infrastructure. The next inflection point.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+      <a href="burn-cluster.html" class="hub-card">
+        <div class="hub-card-title">The Burn Cluster</div>
+        <div class="hub-card-desc">Where the data-as-infrastructure philosophy started. Children's National, 2012.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+    </div>
   </div>
-</footer>
+</div>
 
+<footer class="site-footer">
+  <p>Jefferson McMillan-Wilhoit, MPH, MPA, CHCIO, CDH-E · <a href="mailto:jefferson@fandtlabs.com">jefferson@fandtlabs.com</a></p>
+</footer>
 </body>
 </html>

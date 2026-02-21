@@ -16,20 +16,20 @@
     <span class="nav-logo">Jefferson McMillan-Wilhoit</span>
     <ul class="nav-links">
       <li><a href="../index.html">Home</a></li>
+      <li><a href="../built.html" class="active">What I've Built</a></li>
+      <li><a href="../thinking.html">How I Think</a></li>
       <li><a href="../about.html">About</a></li>
-      <li><a href="../case-studies.html" class="active">Case Studies</a></li>
       <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../speaking.html">Speaking & Media</a></li>
-      <li><a href="../contact.html" class="nav-cta">Talk to Me</a></li>
+      <li><a href="../contact.html" class="nav-cta">Let's Talk</a></li>
     </ul>
   </div>
 </nav>
 
 <section class="case-hero">
   <div class="section-inner">
-    <div class="case-eyebrow">Case Study · Clinical Informatics · GIS · Health Equity</div>
+    <div class="case-eyebrow">Case Study · Clinical Informatics · GIS · Population Health</div>
     <h1 class="case-headline">The Burn Cluster: When the Data Finds the Children First</h1>
-    <p class="case-deck">At Children's National Medical Center, Jefferson applied GIS analysis to pediatric injury data and found what no one else had seen. This is the story of why he does what he does.</p>
+    <p class="case-deck">At Children's National, I applied GIS to clinical data in a way nobody at the institution had done before. The result wasn't a dashboard. It was a discovery that traced a pattern of pediatric burn injuries back to one landlord — and directly informed protective action for the children in those buildings.</p>
   </div>
 </section>
 
@@ -45,11 +45,11 @@
     </div>
     <div class="case-meta-item">
       <div class="case-meta-label">Methods</div>
-      <div class="case-meta-value">GIS, Geospatial Analysis, Population Health Analytics</div>
+      <div class="case-meta-value">GIS, Geospatial Analysis, Population Health Analytics, Clinical Decision Support</div>
     </div>
     <div class="case-meta-item">
-      <div class="case-meta-label">Location</div>
-      <div class="case-meta-value">Washington, D.C. metro area</div>
+      <div class="case-meta-label">Timeline</div>
+      <div class="case-meta-value">2012 – April 2016</div>
     </div>
   </div>
 </div>
@@ -58,59 +58,70 @@
   <div class="section-inner">
 
     <div class="case-body-section" style="padding-top:0;">
-      <h2>The Discovery</h2>
-      <p>Jefferson was working with pediatric injury data at Children's National when he noticed something that didn't fit the expected distribution. The burn cases weren't random. They were clustering — multiple children, treated at the same hospital, living in the same buildings.</p>
-      <p>He applied geographic information system (GIS) analysis to map the home addresses against the injury data. The cluster became visible immediately: a handful of apartment buildings in the same neighborhood, owned by the same landlord, producing a disproportionate number of pediatric burn injuries.</p>
-      <p>The cause, when investigated: water heaters set at dangerously high temperatures. Not one accident. A pattern. And a pattern with a single, identifiable, correctable cause.</p>
+      <h2>The Problem</h2>
+      <p>Pediatric burn injuries were appearing in the emergency department. The clinical record captured what had happened to each child — the type of burn, the severity, the treatment. But the clinical record alone couldn't explain why these cases were appearing in clusters, or what was causing them.</p>
+      <p>No one at Children's National was applying geospatial methods to clinical outcomes. The infrastructure for doing so — population health registries, a data warehouse that could be queried across patients, the analytical framework for asking geographic questions — didn't exist yet. I was building it.</p>
     </div>
 
-    <div class="case-callout">
-      <div class="callout-number">The data found the children before the system did.</div>
-      <div class="callout-label">No individual clinician seeing one child at a time would have identified the pattern. The insight only existed at the aggregate level — in the data, if you knew how to look.</div>
+    <div class="case-body-section">
+      <h2>The Decision</h2>
+      <p>I had been building out the institution's first real population health infrastructure. As that work matured, it became possible to ask questions that hadn't been answerable before: not just what is happening to individual patients, but what patterns exist across the patient population, and what do those patterns tell us about the communities these children come from?</p>
+      <p>The decision to apply GIS methods to the burn injury data came from a simple observation: the clinical data was telling an incomplete story. The children were coming from somewhere. The addresses were in the record. If I could map them, I could see what the clinical data alone couldn't show.</p>
+    </div>
+
+    <div class="case-body-section">
+      <h2>What I Built</h2>
+      <p>The infrastructure that made this discovery possible wasn't the GIS analysis — it was everything that came before it. Population health registries that captured patient data in a consistent, queryable format. A data warehouse strategy that made it possible to run population-level queries across the patient record. Clinical decision support tools that surfaced the right information at the right moment.</p>
+      <p>The geospatial analysis was possible because the infrastructure existed to support it. That's the point: data infrastructure is not valuable because of any single query. It's valuable because of the questions it makes possible that nobody had thought to ask yet.</p>
+    </div>
+
+    <div class="case-body-section">
+      <h2>The Result</h2>
+      <ul>
+        <li>Identified a <strong>geographic cluster of pediatric burn injuries</strong> concentrated in specific apartment buildings in the D.C. metro area</li>
+        <li>Traced the pattern to <strong>one landlord, multiple buildings, water heaters set dangerously high</strong> — a systemic hazard invisible in the clinical record</li>
+        <li>Data directly informed protective action for children in those buildings</li>
+        <li>Patent received for work completed during this tenure at Children's National</li>
+        <li>Established clinical decision support infrastructure that preceded the industry-wide push for population health tools by several years</li>
+      </ul>
+    </div>
+
+    <div class="callout-quote">
+      <blockquote>"The clinical data told me what happened to each child. The map told me why it kept happening. Those are two different questions, and only one of them lets you actually stop it."</blockquote>
+      <cite>— Jefferson McMillan-Wilhoit</cite>
     </div>
 
     <div class="case-body-section">
       <h2>Why This Story Matters</h2>
-      <p>This discovery is the earliest, clearest statement of Jefferson's professional thesis: data, applied rigorously and with the right questions, can find what individual human observation misses. And when it finds something, the obligation is to act.</p>
-      <p>The GIS analysis at Children's National wasn't a research project. It was a practice — the habit of asking "what does the geographic distribution of this data tell us that a chart doesn't?" That habit, developed in a pediatric hospital analyzing injury data, became the foundation of everything Jefferson built afterward.</p>
-      <p>The AllVax equity monitoring. The COVID death disparity analysis at Lake County. The cost-effectiveness model for disease surveillance in his doctoral research. All of it traces back to a moment when Jefferson looked at a map of burn injuries and asked why they were all coming from the same buildings.</p>
-    </div>
-
-    <div class="case-body-section">
-      <h2>The Method, Applied More Broadly</h2>
-      <p>After the burn cluster discovery, Jefferson formalized the approach: using geographic information that had never before been applied to disease treatment and prevention. He created novel population health strategies that mapped clinical data against social determinants — neighborhood, housing type, proximity to environmental hazards, access to care.</p>
-      <p>This was early-stage work in what is now recognized as geospatial public health analytics. Jefferson was doing it at a pediatric hospital in Washington, D.C. before the field had a common name.</p>
-    </div>
-
-    <div class="case-body-section">
-      <h2>What This Shows</h2>
-      <p>The burn cluster story is the answer to the question every hiring manager is really asking: <em>Why does this person do what they do?</em></p>
-      <p>Jefferson does what he does because he has seen — literally, in the data — what happens when systems fail to see patterns that are right there if you look correctly. He builds the tools that let organizations look correctly. He trains the instinct to ask the geographic question, the population question, the "why is this distributed this way" question.</p>
-      <p>That's not a credential. It's a philosophy, formed at the intersection of a data set and a child who got hurt.</p>
-    </div>
-
-    <div style="margin-top:40px; padding-top:32px; border-top:1.5px solid #D8D0E8; display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="northwestern.html" class="btn btn-primary">Next: Northwestern →</a>
-      <a href="../case-studies.html" class="btn btn-secondary">All Case Studies</a>
+      <p>This is not the case study with the largest numbers. It doesn't have a 30× metric or a 40,000-person headline. What it has is the clearest example of what I mean when I say I find where a system fails a human being.</p>
+      <p>The system — the clinical data system, the building inspection system, the landlord accountability system — was failing those children. The data infrastructure I built made it possible to see that failure in a way that could be acted on. That is what this work is for.</p>
+      <p>Every role since has been a version of the same thing: build the infrastructure that makes the right questions answerable, then ask them.</p>
     </div>
 
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-name">Jefferson McMillan-Wilhoit</div>
-    <ul class="footer-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../case-studies.html">Case Studies</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../speaking.html">Speaking</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-    <div class="footer-copy">© 2026 Jefferson McMillan-Wilhoit</div>
+<div class="section--alt">
+  <div class="section-inner">
+    <div class="section-label">Continue</div>
+    <h2 class="section-title">What came next.</h2>
+    <div class="hub-grid">
+      <a href="northwestern.html" class="hub-card">
+        <div class="hub-card-title">Northwestern EHR</div>
+        <div class="hub-card-desc">The next scale of the problem. 4 systems, 21 locations, an enterprise.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+      <a href="../thinking.html" class="hub-card">
+        <div class="hub-card-title">How I Think</div>
+        <div class="hub-card-desc">This case is the origin of the framework. Read the full operating system.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+    </div>
   </div>
-</footer>
+</div>
 
+<footer class="site-footer">
+  <p>Jefferson McMillan-Wilhoit, MPH, MPA, CHCIO, CDH-E · <a href="mailto:jefferson@fandtlabs.com">jefferson@fandtlabs.com</a></p>
+</footer>
 </body>
 </html>

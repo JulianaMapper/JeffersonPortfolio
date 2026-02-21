@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F&T Labs / PH360 — Jefferson McMillan-Wilhoit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <span class="nav-logo">Jefferson McMillan-Wilhoit</span>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../built.html" class="active">What I've Built</a></li>
+      <li><a href="../thinking.html">How I Think</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../resume.html">Resume</a></li>
+      <li><a href="../contact.html" class="nav-cta">Let's Talk</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="case-hero">
+  <div class="section-inner">
+    <div class="case-eyebrow">Case Study · Cloud Architecture · AI Platform · Health Tech</div>
+    <h1 class="case-headline">F&T Labs: Building the Platform the Market Was Missing</h1>
+    <p class="case-deck">I had been the CIO who needed this platform and couldn't find it. So I built it from scratch — 7-layer, HIPAA-compliant, multi-tenant AI infrastructure on AWS. Not as technical oversight. As architect of record.</p>
+  </div>
+</section>
+
+<div class="case-meta-strip">
+  <div class="case-meta-inner">
+    <div class="case-meta-item">
+      <div class="case-meta-label">Organization</div>
+      <div class="case-meta-value">Flourish & Thrive Labs (F&T Labs)</div>
+    </div>
+    <div class="case-meta-item">
+      <div class="case-meta-label">Role</div>
+      <div class="case-meta-value">Founder, CEO & Architect of Record</div>
+    </div>
+    <div class="case-meta-item">
+      <div class="case-meta-label">Platform</div>
+      <div class="case-meta-value">AWS — Bedrock, Lambda, S3, API Gateway, Cognito, CloudFormation</div>
+    </div>
+    <div class="case-meta-item">
+      <div class="case-meta-label">Timeline</div>
+      <div class="case-meta-value">Oct 2022 – Present</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-inner">
+
+    <div class="case-stats-row">
+      <div class="case-stat-box">
+        <div class="stat-num">30×</div>
+        <div class="stat-lbl">revenue growth in year one</div>
+      </div>
+      <div class="case-stat-box">
+        <div class="stat-num">7</div>
+        <div class="stat-lbl">architectural layers — HIPAA-compliant, multi-tenant by design</div>
+      </div>
+      <div class="case-stat-box">
+        <div class="stat-num">AWS</div>
+        <div class="stat-lbl">native architecture — not layered on existing SaaS</div>
+      </div>
+    </div>
+
+    <div class="case-body-section">
+      <h2>The Problem</h2>
+      <p>As CIO at Lake County Health Department, I spent four years experiencing firsthand what was broken in public health technology infrastructure. Local health departments were running on systems that couldn't talk to each other, couldn't scale, and weren't built by anyone who had actually run a health department.</p>
+      <p>When I went looking for a platform that could modernize public health data infrastructure — something cloud-native, AI-ready, HIPAA-compliant, and actually usable by under-resourced local departments — I couldn't find it. Enterprise health IT vendors build for hospital systems. Public health vendors build legacy software that looks like it hasn't changed since 2003. Nobody had built the thing the market actually needed.</p>
+    </div>
+
+    <div class="case-body-section">
+      <h2>The Decision</h2>
+      <p>I co-founded F&T Labs to build the platform I couldn't find when I was a buyer. The decision to build on AWS from the ground up — rather than layering onto an existing SaaS product — was deliberate. I'd been the CIO who got burned by that approach. Platforms that patch HIPAA compliance onto an existing architecture are never actually compliant-by-design. They're compliant-by-policy, and policy erodes.</p>
+      <p>The design constraints were non-negotiable from day one: equity-centered, HIPAA-compliant as a structural property not a checklist item, multi-tenant so it could serve organizations of different sizes, and AI-ready at the infrastructure level — not bolted on after the fact.</p>
+    </div>
+
+    <div class="case-body-section">
+      <h2>What I Built</h2>
+      <p>PH360 (Public Health 360) is a 7-layer, HIPAA-compliant, multi-tenant AI platform on AWS. I am the architect of record — I designed the architecture, wrote the CloudFormation templates, and built the Lambda functions. This is not a case where the CEO oversees an engineering team. I built it.</p>
+
+      <div class="tech-stack">
+        <div class="tech-stack-label">PH360 — 7-Layer AWS Architecture</div>
+        <div class="tech-layer">
+          <div class="tech-layer-num">1</div>
+          <div class="tech-layer-name">Presentation Layer</div>
+          <div class="tech-layer-detail">User-facing interfaces for health department staff and administrators. Designed for non-technical users who can't afford a steep learning curve.</div>
+        </div>
+        <div class="tech-layer">
+          <div class="tech-layer-num">2</div>
+          <div class="tech-layer-name">API Gateway</div>
+          <div class="tech-layer-detail">AWS API Gateway — secure, scalable request routing. Rate limiting and authentication enforcement at the gateway level.</div>
+        </div>
+        <div class="tech-layer">
+          <div class="tech-layer-num">3</div>
+          <div class="tech-layer-name">Authentication & Authorization</div>
+          <div class="tech-layer-detail">AWS Cognito — multi-tenant identity management, role-based access control, MFA enforcement. Compliance-by-design, not by policy.</div>
+        </div>
+        <div class="tech-layer">
+          <div class="tech-layer-num">4</div>
+          <div class="tech-layer-name">Compute Layer</div>
+          <div class="tech-layer-detail">AWS Lambda — serverless compute for data processing pipelines, automation workflows, and AI inference calls. Zero idle infrastructure cost.</div>
+        </div>
+        <div class="tech-layer">
+          <div class="tech-layer-num">5</div>
+          <div class="tech-layer-name">AI / Knowledge Layer</div>
+          <div class="tech-layer-detail">AWS Bedrock + Claude LLM — RAG-based knowledge system for public health data analysis. Automation pipelines for reporting and surveillance workflows.</div>
+        </div>
+        <div class="tech-layer">
+          <div class="tech-layer-num">6</div>
+          <div class="tech-layer-name">Data Storage</div>
+          <div class="tech-layer-detail">AWS S3 — encrypted at rest, versioned, lifecycle-managed. Structured for HIPAA-compliant PHI handling and audit trail requirements.</div>
+        </div>
+        <div class="tech-layer">
+          <div class="tech-layer-num">7</div>
+          <div class="tech-layer-name">Infrastructure as Code</div>
+          <div class="tech-layer-detail">AWS CloudFormation — every resource defined in code. Reproducible, auditable, deployable. No snowflake infrastructure.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-body-section">
+      <h2>The Result</h2>
+      <ul>
+        <li><strong>30× year-over-year revenue growth</strong> — from $22K to $500K+ in 12 months through strategic business development and government RFP capture</li>
+        <li>PH360 in active production serving local health departments</li>
+        <li>WBE and SBA 8(a) certified — positioned for government contracting at scale</li>
+        <li>Built simultaneously with full founder-operator responsibilities across CEO, CFO, CRO, and CIO functions</li>
+      </ul>
+    </div>
+
+    <div class="callout-quote">
+      <blockquote>"I'd been the buyer who couldn't find this platform. So I built it. The advantage of building something you've needed yourself is that you already know every way the existing solutions fail."</blockquote>
+      <cite>— Jefferson McMillan-Wilhoit</cite>
+    </div>
+
+  </div>
+</div>
+
+<div class="section--alt">
+  <div class="section-inner">
+    <div class="section-label">Next</div>
+    <h2 class="section-title">See what came before it.</h2>
+    <div class="hub-grid">
+      <a href="allvax.html" class="hub-card">
+        <div class="hub-card-title">AllVax — Lake County</div>
+        <div class="hub-card-desc">The vaccine orchestration system that made this platform necessary. 40K in 24 hours.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+      <a href="../thinking.html" class="hub-card">
+        <div class="hub-card-title">How I Think</div>
+        <div class="hub-card-desc">The operating system behind the architecture decisions.</div>
+        <div class="hub-card-arrow">Read →</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Jefferson McMillan-Wilhoit, MPH, MPA, CHCIO, CDH-E · <a href="mailto:jefferson@fandtlabs.com">jefferson@fandtlabs.com</a></p>
+</footer>
+</body>
+</html>

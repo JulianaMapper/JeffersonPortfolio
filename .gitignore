@@ -5,6 +5,7 @@
 *.docx
 *.txt
 *.json
+*.pdf
 !_config.yml
 
 # Application folders (should never be here anyway)

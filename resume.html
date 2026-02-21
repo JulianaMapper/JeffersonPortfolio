@@ -27,11 +27,13 @@
 </nav>
 
 <section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
   <div class="hero-inner" style="grid-template-columns:1fr;">
     <div class="hero-content">
-      <div class="hero-eyebrow">Resume & CV</div>
-      <h1 class="hero-name">Every credential.<br>Every layer.</h1>
-      <p class="hero-sub" style="max-width:560px;">This page is for recruiters and hiring systems. The rest of the site already did the selling.</p>
+      <div class="hero-eyebrow anim">The Full Picture</div>
+      <h1 class="hero-name anim" data-delay="0.1">Let's get<br>to know me.</h1>
+      <p class="hero-sub anim" data-delay="0.2" style="max-width:600px;">Education, credentials, certifications, speaking, community service, and the work history behind it all. The resume PDF is here too — but this page has more.</p>
     </div>
   </div>
 </section>
@@ -128,18 +130,99 @@
 
     <div style="margin-top:48px; padding-top:40px; border-top:2px solid var(--color-border);">
       <div class="section-label">Education</div>
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-top:16px;">
-        <div style="padding:16px; background:var(--color-bg-alt); border-radius:6px;">
-          <div style="font-weight:700; color:var(--color-primary); font-size:0.9rem;">DrPH candidate — Health Policy & Management</div>
-          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:4px;">Johns Hopkins Bloomberg School of Public Health · Public Health Informatics concentration</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-top:16px;">
+
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border); border-top: 3px solid var(--color-accent);">
+          <div style="font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:var(--color-secondary); margin-bottom:8px;">In Progress</div>
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem; line-height:1.4;">DrPH — Health Policy &amp; Management</div>
+          <div style="font-size:0.82rem; font-weight:600; color:var(--color-secondary); margin-top:6px;">Johns Hopkins Bloomberg School of Public Health</div>
+          <div style="font-size:0.8rem; color:var(--color-meta); margin-top:4px;">Concentration: Public Health Informatics</div>
         </div>
-        <div style="padding:16px; background:var(--color-bg-alt); border-radius:6px;">
-          <div style="font-weight:700; color:var(--color-primary); font-size:0.9rem;">MPH — Epidemiology &amp; MPA — Public Administration</div>
-          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:4px;">University of Illinois Springfield</div>
+
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border);">
+          <div style="font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:var(--color-secondary); margin-bottom:8px;">Master of Public Health</div>
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem; line-height:1.4;">MPH — Epidemiology</div>
+          <div style="font-size:0.82rem; font-weight:600; color:var(--color-secondary); margin-top:6px;">University of Illinois Springfield</div>
         </div>
-        <div style="padding:16px; background:var(--color-bg-alt); border-radius:6px;">
-          <div style="font-weight:700; color:var(--color-primary); font-size:0.9rem;">B.S. Aeronautics</div>
-          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:4px;">Embry-Riddle Aeronautical University · Magna Cum Laude · Honors Program · GPA 3.72</div>
+
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border);">
+          <div style="font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:var(--color-secondary); margin-bottom:8px;">Master of Public Administration</div>
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem; line-height:1.4;">MPA — Public Administration</div>
+          <div style="font-size:0.82rem; font-weight:600; color:var(--color-secondary); margin-top:6px;">University of Illinois Springfield</div>
+        </div>
+
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border);">
+          <div style="font-size:0.6rem; font-weight:700; text-transform:uppercase; letter-spacing:0.14em; color:var(--color-secondary); margin-bottom:8px;">Bachelor of Science</div>
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem; line-height:1.4;">B.S. Aeronautics</div>
+          <div style="font-size:0.82rem; font-weight:600; color:var(--color-secondary); margin-top:6px;">Embry-Riddle Aeronautical University</div>
+          <div style="font-size:0.8rem; color:var(--color-meta); margin-top:4px;">Magna Cum Laude · Honors Program · GPA 3.72</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="margin-top:48px; padding-top:40px; border-top:2px solid var(--color-border);">
+      <div class="section-label">Certifications</div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-top:16px;">
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border);">
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem;">CHCIO</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:4px;">Certified Healthcare CIO · CHIME</div>
+        </div>
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border);">
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem;">CDH-E</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:4px;">Certified Digital Health Executive · CHIME</div>
+        </div>
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border);">
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem;">WBE · SBA 8(a)</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:4px;">Women Business Enterprise · Small Business Administration 8(a) certified</div>
+        </div>
+        <div style="padding:20px; background:var(--color-bg-alt); border-radius:8px; border:1px solid var(--color-border);">
+          <div style="font-weight:700; color:var(--color-primary); font-size:0.92rem;">Patent Holder</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:4px;">Clinical decision support innovation · awarded during Children's National tenure</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px; padding-top:40px; border-top:2px solid var(--color-border);">
+      <div class="section-label">Speaking &amp; Recognition</div>
+      <div style="margin-top:16px;">
+        <div style="padding:16px 0; border-bottom:1px solid var(--color-border);">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">Constellation Research BT150</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">Named to the Business Transformation 150 — recognizing the most influential technology leaders driving transformation in their organizations</div>
+        </div>
+        <div style="padding:16px 0; border-bottom:1px solid var(--color-border);">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">GovTech Magazine</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">Featured coverage of AllVax and equitable vaccine distribution model · January 2021</div>
+        </div>
+        <div style="padding:16px 0; border-bottom:1px solid var(--color-border);">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">ABC7 Chicago</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">News feature on AllVax and COVID-19 equity-focused response in Lake County</div>
+        </div>
+        <div style="padding:16px 0; border-bottom:1px solid var(--color-border);">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">State Tech Magazine</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">Feature on public health technology innovation and vaccination logistics</div>
+        </div>
+        <div style="padding:16px 0;">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">Salesforce Featured Customer</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">AllVax recognized as a flagship public sector use case for Salesforce Customer 360 for Government</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px; padding-top:40px; border-top:2px solid var(--color-border);">
+      <div class="section-label">Community &amp; Board Service</div>
+      <div style="margin-top:16px;">
+        <div style="padding:16px 0; border-bottom:1px solid var(--color-border);">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">Volunteer EMT</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">Active volunteer emergency medical technician. Patient care before strategy sessions — the part of the work that keeps everything else honest.</div>
+        </div>
+        <div style="padding:16px 0; border-bottom:1px solid var(--color-border);">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">Lake County 2047 Community Health Improvement Plan</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">Authored 25-year CHIP engaging 75 community partners; drove 250% increase in participatory decision-making among historically underrepresented communities</div>
+        </div>
+        <div style="padding:16px 0;">
+          <div style="font-weight:600; color:var(--color-primary); font-size:0.9rem;">CHIME — College of Healthcare Information Management Executives</div>
+          <div style="font-size:0.82rem; color:var(--color-meta); margin-top:3px;">Active member; CHCIO and CDH-E certification board-recognized</div>
         </div>
       </div>
     </div>
@@ -163,5 +246,6 @@
     </ul>
   </div>
 </footer>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

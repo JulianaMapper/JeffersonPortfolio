@@ -26,11 +26,13 @@
 </nav>
 
 <section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
   <div class="hero-inner" style="grid-template-columns:1fr;">
     <div class="hero-content">
-      <div class="hero-eyebrow">About</div>
-      <h1 class="hero-name">The full picture.</h1>
-      <p class="hero-sub" style="max-width:600px;">Education, credentials, community, and the rest — for the reader who has already seen the work and wants to understand the person behind it.</p>
+      <div class="hero-eyebrow anim">About</div>
+      <h1 class="hero-name anim" data-delay="0.1">The full picture.</h1>
+      <p class="hero-sub anim" data-delay="0.2" style="max-width:600px;">Education, credentials, community, and the rest — for the reader who has already seen the work and wants to understand the person behind it.</p>
     </div>
   </div>
 </section>
@@ -40,56 +42,54 @@
     <div class="about-grid">
 
       <div class="about-body">
-
-        <div class="section-label">Press & Recognition</div>
-        <h2 class="section-title" style="margin-bottom:28px;">In the record.</h2>
+        <div class="section-label anim">Press & Recognition</div>
+        <h2 class="section-title anim" data-delay="0.1" style="margin-bottom:28px;">In the record.</h2>
         <div class="press-grid" style="margin-top:0;">
 
-          <a href="https://www.govtech.com/biz/salesforce-announces-vaccine-cloud-for-logistical-challenges.html" target="_blank" class="press-card">
+          <a href="https://www.govtech.com/biz/salesforce-announces-vaccine-cloud-for-logistical-challenges.html" target="_blank" class="press-card anim" data-delay="0.1">
             <div class="press-outlet">GovTech · January 2021</div>
             <div class="press-headline">Salesforce Announces Vaccine Cloud for Logistical Challenges</div>
             <div class="press-quote">"Our cloud-based AllVax system enables us to shield our community and employees from some of the difficult logistical pieces of the vaccination process to focus and execute on our core mission."</div>
             <span class="press-link">Read article →</span>
           </a>
 
-          <a href="https://abc7chicago.com/post/health-insurance-illinois-plan-medical/11057904/" target="_blank" class="press-card">
+          <a href="https://abc7chicago.com/post/health-insurance-illinois-plan-medical/11057904/" target="_blank" class="press-card anim" data-delay="0.2">
             <div class="press-outlet">ABC7 News Chicago · September 2021</div>
             <div class="press-headline">Latinx People Least Likely in Chicago Area to Have Health Insurance</div>
             <div class="press-quote">"The consequences of having a high uninsured population is that particular community is going to end up not seeking care until they absolutely have to — and by then it could be too late."</div>
             <span class="press-link">Read article →</span>
           </a>
 
-          <a href="https://statetechmagazine.com/article/2021/04/collaboration-tools-connect-health-agencies-working-remotely-crisis" target="_blank" class="press-card">
+          <a href="https://statetechmagazine.com/article/2021/04/collaboration-tools-connect-health-agencies-working-remotely-crisis" target="_blank" class="press-card anim" data-delay="0.1">
             <div class="press-outlet">State Tech Magazine · April 2021</div>
             <div class="press-headline">Collaboration Tools Connect Health Agencies Working Remotely in a Crisis</div>
             <div class="press-context">Featured for Lake County's technology response to COVID-19.</div>
             <span class="press-link">Read article →</span>
           </a>
 
-          <div class="press-card">
+          <div class="press-card anim" data-delay="0.2">
             <div class="press-outlet">Salesforce Customer Success</div>
             <div class="press-headline">Lake County Health Department — AllVax Portal</div>
             <div class="press-context">Featured as a Salesforce Customer 360 for Government success story for the AllVax COVID vaccine orchestration system.</div>
           </div>
 
-          <div class="press-card">
+          <div class="press-card anim" data-delay="0.1">
             <div class="press-outlet">Slalom</div>
             <div class="press-headline">Responding to a Crisis, Building Trust for the Future</div>
             <div class="press-context">Featured for the AllVax system design — equity-centered community vaccination at scale.</div>
           </div>
 
-          <div class="press-card">
+          <div class="press-card anim" data-delay="0.2">
             <div class="press-outlet">Constellation Research · 2022</div>
             <div class="press-headline">Business Transformation 150 Honoree</div>
             <div class="press-context">Named to the BT150 — recognizing the world's most influential business transformation leaders.</div>
           </div>
 
         </div>
-
-      </div><!-- /about-body -->
+      </div>
 
       <div>
-        <div class="about-sidebar-card">
+        <div class="about-sidebar-card anim">
           <h3>Education</h3>
           <ul>
             <li><strong>DrPH candidate — Health Policy & Management</strong>Johns Hopkins Bloomberg School of Public Health · Public Health Informatics concentration</li>
@@ -100,7 +100,7 @@
           </ul>
         </div>
 
-        <div class="about-sidebar-card">
+        <div class="about-sidebar-card anim" data-delay="0.1">
           <h3>Certifications & Recognition</h3>
           <ul>
             <li><strong>CHCIO</strong>Certified Healthcare Chief Information Officer (CHIME)</li>
@@ -110,7 +110,7 @@
           </ul>
         </div>
 
-        <div class="about-sidebar-card">
+        <div class="about-sidebar-card anim" data-delay="0.2">
           <h3>Community</h3>
           <ul>
             <li>Board Member, Lake County Forest Preserve Foundation</li>
@@ -118,7 +118,7 @@
           </ul>
         </div>
 
-        <div class="about-sidebar-card">
+        <div class="about-sidebar-card anim" data-delay="0.3">
           <h3>The Rest</h3>
           <ul>
             <li>Co-founded F&amp;T Labs with my wife, Juliana</li>
@@ -138,5 +138,7 @@
 <footer class="site-footer">
   <p>Jefferson McMillan-Wilhoit, MPH, MPA, CHCIO, CDH-E · <a href="mailto:jefferson@fandtlabs.com">jefferson@fandtlabs.com</a></p>
 </footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

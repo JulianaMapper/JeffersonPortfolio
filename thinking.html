@@ -27,11 +27,13 @@
 </nav>
 
 <section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
   <div class="hero-inner" style="grid-template-columns: 1fr;">
     <div class="hero-content">
-      <div class="hero-eyebrow">How I Think</div>
-      <h1 class="hero-name">The operating system.</h1>
-      <p class="hero-sub" style="max-width:660px;">A direct explanation of how I approach problems, why I approach them that way, and where those habits come from.</p>
+      <div class="hero-eyebrow anim">How I Think</div>
+      <h1 class="hero-name anim" data-delay="0.1">The operating system.</h1>
+      <p class="hero-sub anim" data-delay="0.2" style="max-width:660px;">A direct explanation of how I approach problems, why I approach them that way, and where those habits come from.</p>
     </div>
   </div>
 </section>
@@ -40,7 +42,7 @@
   <div class="section-inner">
     <div class="think-grid">
 
-      <div class="think-section">
+      <div class="think-section anim">
         <div class="think-label">The Duality</div>
         <h2 class="think-heading">The executive who can't read the code is guessing. The engineer who's never managed a budget is building in a vacuum.</h2>
         <p>Most health IT executives understand the strategy or the architecture. I've done both — at the same time. I've run a $14.5M budget with 95 people in my reporting chain. And I've personally written the CloudFormation templates and Lambda functions for a HIPAA-compliant AI platform.</p>
@@ -48,7 +50,7 @@
         <p>That's what I mean when I say I've been on both sides of the table. I've been the CIO who needed the platform and couldn't find it. I've been the architect who built it. Those aren't two different people. They're the same lens, focused at different distances.</p>
       </div>
 
-      <div class="think-section">
+      <div class="think-section anim">
         <div class="think-label">Origin</div>
         <h2 class="think-heading">I started by studying how machines fail the people who operate them.</h2>
         <p>My career started in aviation human factors — specifically, how pilots and crew interact with systems that can kill them when they fail. That training never left. Every technology decision I make starts with the same question I learned to ask at Embry-Riddle: who is the human on the other end of this system, and where does it fail them?</p>
@@ -56,7 +58,7 @@
         <p>I've spent fifteen years building the other kind.</p>
       </div>
 
-      <div class="think-section">
+      <div class="think-section anim">
         <div class="think-label">Preparation</div>
         <h2 class="think-heading">I don't walk into a room with one plan.</h2>
         <p>I prepare obsessively. I think through every question that will be asked before the meeting starts. I have a primary approach, a fallback, and a contingency — not as a hedge against failure, but because good decisions require you to understand the alternatives you're choosing not to take.</p>
@@ -64,14 +66,14 @@
         <p>The A/B/C plan isn't pessimism. It's how you stay in front of a crisis instead of reacting to it.</p>
       </div>
 
-      <div class="think-section">
+      <div class="think-section anim">
         <div class="think-label">Craft</div>
         <h2 class="think-heading">Build the thing worth building.</h2>
         <p>I built the desk I work at. I built the table my family eats dinner on — over a long weekend, because my wife said it couldn't be done in a weekend. Eight years later, it's still our table.</p>
         <p>I don't build fast and disposable. I build things designed to still be standing years later, whether that's a data warehouse, a kitchen table, or a public health AI platform. The question I ask before I start any project is the same one I ask in my woodshop: is this worth building? If the answer is yes, I'm going to build it right. No shortcuts that create future failures. No workarounds that someone else has to clean up.</p>
       </div>
 
-      <div class="think-section">
+      <div class="think-section anim">
         <div class="think-label">Equity</div>
         <h2 class="think-heading">Equity is a design constraint. Not a feature.</h2>
         <p>Early in my career, I learned that a person's zip code is a better predictor of their health outcomes than almost anything else. That reframed how I think about every system I build. Equity isn't something you add at the end to comply with requirements. It's a constraint you design around from the beginning — or you've already failed the people who need the system most.</p>
@@ -85,26 +87,26 @@
 
 <div class="section--alt">
   <div class="section-inner">
-    <div class="section-label">See the work</div>
-    <h2 class="section-title">This is what it looks like in practice.</h2>
-    <p class="section-intro">Each case study shows these principles applied to a real problem, with a real outcome.</p>
+    <div class="section-label anim">See the work</div>
+    <h2 class="section-title anim" data-delay="0.1">This is what it looks like in practice.</h2>
+    <p class="section-intro anim" data-delay="0.2">Each case study shows these principles applied to a real problem, with a real outcome.</p>
     <div class="hub-grid">
-      <a href="case-studies/ftlabs.html" class="hub-card">
+      <a href="case-studies/ftlabs.html" class="hub-card anim" data-delay="0.1">
         <div class="hub-card-title">PH360 / F&T Labs</div>
         <div class="hub-card-desc">Built the platform the market was missing. AWS architecture from scratch.</div>
         <div class="hub-card-arrow">Read →</div>
       </a>
-      <a href="case-studies/allvax.html" class="hub-card">
+      <a href="case-studies/allvax.html" class="hub-card anim" data-delay="0.2">
         <div class="hub-card-title">AllVax / Lake County</div>
         <div class="hub-card-desc">Equity as the design constraint. 40K in 24 hours.</div>
         <div class="hub-card-arrow">Read →</div>
       </a>
-      <a href="case-studies/northwestern.html" class="hub-card">
+      <a href="case-studies/northwestern.html" class="hub-card anim" data-delay="0.3">
         <div class="hub-card-title">Northwestern EHR</div>
         <div class="hub-card-desc">4 systems. 21 locations. One unified data architecture.</div>
         <div class="hub-card-arrow">Read →</div>
       </a>
-      <a href="case-studies/burn-cluster.html" class="hub-card">
+      <a href="case-studies/burn-cluster.html" class="hub-card anim" data-delay="0.4">
         <div class="hub-card-title">The Burn Cluster</div>
         <div class="hub-card-desc">GIS + clinical data. A discovery that protected children.</div>
         <div class="hub-card-arrow">Read →</div>
@@ -117,5 +119,6 @@
   <p>Jefferson McMillan-Wilhoit, MPH, MPA, CHCIO, CDH-E · <a href="mailto:jefferson@fandtlabs.com">jefferson@fandtlabs.com</a></p>
 </footer>
 
+<script src="assets/js/main.js"></script>
 </body>
 </html>

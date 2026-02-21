@@ -1,0 +1,16 @@
+# Only the portfolio website belongs in this repo.
+# Never commit resume source files, databases, or application materials.
+
+*.md
+*.docx
+*.txt
+*.json
+!_config.yml
+
+# Application folders (should never be here anyway)
+Applications/
+fonts/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -454,9 +454,10 @@ img { max-width: 100%; display: block; }
 
 /* ── ABOUT PAGE ─────────────────────────────────────────────────── */
 .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; align-items: start; }
-.about-body p { font-size: 0.95rem; line-height: 1.8; color: var(--color-text); margin-bottom: 16px; }
+.about-body p { font-size: 0.95rem; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
 .about-body p:last-child { margin-bottom: 0; }
 .about-body strong { color: var(--color-primary); font-weight: 600; }
+.about-prose p:first-child { font-family: var(--font-serif); font-size: 1rem; line-height: 1.85; color: var(--color-text); }
 .about-sidebar-card { background: var(--color-bg-alt); border-radius: 6px; padding: 24px; margin-bottom: 20px; }
 .about-sidebar-card h3 {
   font-size: 0.62rem;

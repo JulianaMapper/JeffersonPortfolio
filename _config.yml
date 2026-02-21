@@ -1,0 +1,14 @@
+# GitHub Pages configuration
+theme: null
+plugins: []
+
+# Site metadata
+title: Jefferson McMillan-Wilhoit
+description: Health IT Executive & Cloud Architect
+url: "https://julianaMapper.github.io"
+baseurl: "/JeffersonPortfolio"
+
+# Exclude non-web files
+exclude:
+  - README.md
+  - "*.sh"

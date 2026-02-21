@@ -9,337 +9,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-<style>
-
-/* ── OS SHELL ──────────────────────────────────────────────────── */
-.os-shell {
-  background: #0e0b14;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
-  max-width: var(--max-w);
-  margin: 0 auto;
-}
-
-/* Title bar */
-.os-titlebar {
-  background: #1c1529;
-  padding: 12px 18px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  border-bottom: 1px solid rgba(155,121,200,0.2);
-}
-.os-dots {
-  display: flex;
-  gap: 7px;
-}
-.os-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-}
-.os-dot-red    { background: #ff5f57; }
-.os-dot-yellow { background: #febc2e; }
-.os-dot-green  { background: #28c840; }
-.os-title-text {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: rgba(255,255,255,0.4);
-  letter-spacing: 0.04em;
-  flex: 1;
-  text-align: center;
-}
-.os-status {
-  font-family: monospace;
-  font-size: 0.65rem;
-  color: #28c840;
-  letter-spacing: 0.06em;
-}
-
-/* Process tab bar */
-.os-tabs {
-  background: #140f1f;
-  border-bottom: 1px solid rgba(155,121,200,0.15);
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-.os-tabs::-webkit-scrollbar { display: none; }
-
-.os-tab {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 11px 20px;
-  cursor: pointer;
-  border-right: 1px solid rgba(155,121,200,0.1);
-  transition: background 0.2s;
-  white-space: nowrap;
-  border-bottom: 2px solid transparent;
-  position: relative;
-  user-select: none;
-}
-.os-tab:hover { background: rgba(155,121,200,0.07); }
-.os-tab.active {
-  background: rgba(155,121,200,0.12);
-  border-bottom-color: #9B79C8;
-}
-.os-tab-pid {
-  font-family: monospace;
-  font-size: 0.6rem;
-  color: rgba(255,255,255,0.22);
-  letter-spacing: 0.04em;
-}
-.os-tab-name {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: rgba(255,255,255,0.45);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: color 0.2s;
-}
-.os-tab.active .os-tab-name { color: #c8b8e8; }
-.os-tab-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(155,121,200,0.3);
-  transition: background 0.2s;
-}
-.os-tab.active .os-tab-dot { background: #28c840; }
-
-/* Content pane */
-.os-content {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  min-height: 520px;
-}
-
-/* Sidebar */
-.os-sidebar {
-  background: #100d1a;
-  border-right: 1px solid rgba(155,121,200,0.12);
-  padding: 24px 0;
-}
-.os-sidebar-label {
-  font-family: monospace;
-  font-size: 0.58rem;
-  color: rgba(255,255,255,0.2);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0 18px 10px;
-}
-.os-sidebar-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 9px 18px;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.os-sidebar-item:hover { background: rgba(155,121,200,0.06); }
-.os-sidebar-item.active { background: rgba(155,121,200,0.13); }
-.os-sidebar-icon {
-  font-family: monospace;
-  font-size: 0.75rem;
-  color: rgba(155,121,200,0.5);
-  width: 16px;
-  flex-shrink: 0;
-  transition: color 0.15s;
-}
-.os-sidebar-item.active .os-sidebar-icon { color: #9B79C8; }
-.os-sidebar-text {
-  font-family: var(--font-sans);
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.35);
-  transition: color 0.15s;
-}
-.os-sidebar-item.active .os-sidebar-text,
-.os-sidebar-item:hover .os-sidebar-text { color: rgba(255,255,255,0.75); }
-.os-sidebar-badge {
-  margin-left: auto;
-  font-family: monospace;
-  font-size: 0.58rem;
-  color: rgba(155,121,200,0.4);
-}
-.os-sidebar-item.active .os-sidebar-badge { color: #28c840; }
-
-/* Main panel */
-.os-panel {
-  padding: 0;
-  position: relative;
-}
-.os-pane {
-  display: none;
-  padding: 36px 40px 40px;
-  animation: pane-in 0.25s ease;
-}
-.os-pane.active { display: block; }
-
-@keyframes pane-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Pane header */
-.pane-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 28px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(155,121,200,0.15);
-}
-.pane-process {
-  font-family: monospace;
-  font-size: 0.62rem;
-  color: #9B79C8;
-  letter-spacing: 0.1em;
-  margin-bottom: 8px;
-}
-.pane-heading {
-  font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
-  font-weight: 800;
-  color: #EDE4FF;
-  line-height: 1.25;
-  max-width: 520px;
-}
-.pane-status {
-  font-family: monospace;
-  font-size: 0.6rem;
-  color: #28c840;
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-  padding-top: 4px;
-  opacity: 0.8;
-}
-
-/* Pane body */
-.pane-body p {
-  font-size: 0.93rem;
-  line-height: 1.85;
-  color: rgba(237,228,255,0.7);
-  margin-bottom: 16px;
-}
-.pane-body p:last-child { margin-bottom: 0; }
-.pane-body strong {
-  color: #c8b8e8;
-  font-weight: 600;
-}
-
-/* Duality split layout */
-.duality-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin: 24px 0;
-}
-.duality-card {
-  background: rgba(155,121,200,0.06);
-  border: 1px solid rgba(155,121,200,0.18);
-  border-radius: 6px;
-  padding: 20px;
-}
-.duality-card-label {
-  font-family: monospace;
-  font-size: 0.58rem;
-  color: #9B79C8;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-.duality-card-stat {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #EDE4FF;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.duality-card-text {
-  font-size: 0.78rem;
-  color: rgba(237,228,255,0.5);
-  line-height: 1.5;
-}
-
-/* Equity callout */
-.pane-callout {
-  background: rgba(155,121,200,0.08);
-  border-left: 3px solid #9B79C8;
-  border-radius: 0 4px 4px 0;
-  padding: 16px 18px;
-  margin: 20px 0;
-  font-family: var(--font-serif);
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #c8b8e8;
-  line-height: 1.6;
-}
-
-/* ABC plan visual */
-.abc-plan {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 20px 0;
-}
-.abc-card {
-  background: rgba(155,121,200,0.06);
-  border: 1px solid rgba(155,121,200,0.15);
-  border-radius: 5px;
-  padding: 16px;
-  text-align: center;
-}
-.abc-letter {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
-  font-weight: 900;
-  color: #9B79C8;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.abc-label {
-  font-family: monospace;
-  font-size: 0.6rem;
-  color: rgba(237,228,255,0.4);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-/* Terminal status bar */
-.os-statusbar {
-  background: #3B1F5E;
-  padding: 6px 18px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  border-top: 1px solid rgba(155,121,200,0.2);
-}
-.os-statusbar-item {
-  font-family: monospace;
-  font-size: 0.6rem;
-  color: rgba(237,228,255,0.45);
-  letter-spacing: 0.06em;
-}
-.os-statusbar-item span { color: #9B79C8; }
-
-/* ── RESPONSIVE ─────────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  .os-content { grid-template-columns: 1fr; }
-  .os-sidebar { display: none; }
-  .os-pane { padding: 24px 20px; }
-  .duality-split { grid-template-columns: 1fr; }
-  .abc-plan { grid-template-columns: repeat(3, 1fr); }
-}
-@media (max-width: 480px) {
-  .pane-heading { font-size: 1.1rem; }
-  .pane-status { display: none; }
-}
-</style>
 </head>
 <body>
 
@@ -367,206 +36,51 @@
   </div>
 </section>
 
-<div class="section" style="padding-top: 56px; padding-bottom: 72px;">
-  <div class="os-shell">
+<div class="section">
+  <div class="section-inner">
+    <div class="think-grid">
 
-    <!-- Title bar -->
-    <div class="os-titlebar">
-      <div class="os-dots">
-        <div class="os-dot os-dot-red"></div>
-        <div class="os-dot os-dot-yellow"></div>
-        <div class="os-dot os-dot-green"></div>
+      <div class="think-section">
+        <div class="think-label">The Duality</div>
+        <h2 class="think-heading">The executive who can't read the code is guessing. The engineer who's never managed a budget is building in a vacuum.</h2>
+        <p>Most health IT executives understand the strategy or the architecture. I've done both — at the same time. I've run a $14.5M budget with 95 people in my reporting chain. And I've personally written the CloudFormation templates and Lambda functions for a HIPAA-compliant AI platform.</p>
+        <p>I don't think those are different skill sets applied to different roles. I think they're the same fundamental skill — systems thinking — applied at different altitudes. When you've done both, you stop treating them as separate domains. You start seeing the connections between the budget decision and the architectural choice, between the policy and the data model, between the strategic plan and the API design.</p>
+        <p>That's what I mean when I say I've been on both sides of the table. I've been the CIO who needed the platform and couldn't find it. I've been the architect who built it. Those aren't two different people. They're the same lens, focused at different distances.</p>
       </div>
-      <div class="os-title-text">jmw-os · how-i-think · v15.0</div>
-      <div class="os-status">● RUNNING</div>
+
+      <div class="think-section">
+        <div class="think-label">Origin</div>
+        <h2 class="think-heading">I started by studying how machines fail the people who operate them.</h2>
+        <p>My career started in aviation human factors — specifically, how pilots and crew interact with systems that can kill them when they fail. That training never left. Every technology decision I make starts with the same question I learned to ask at Embry-Riddle: who is the human on the other end of this system, and where does it fail them?</p>
+        <p>Whether it's an EHR that doesn't surface the right data at the point of care, a vaccine registration system that doesn't work in Spanish, or a public health platform that's technically HIPAA-compliant but practically unusable by the staff who run it — the failure mode is always the same. Someone built the system without understanding who would use it.</p>
+        <p>I've spent fifteen years building the other kind.</p>
+      </div>
+
+      <div class="think-section">
+        <div class="think-label">Preparation</div>
+        <h2 class="think-heading">I don't walk into a room with one plan.</h2>
+        <p>I prepare obsessively. I think through every question that will be asked before the meeting starts. I have a primary approach, a fallback, and a contingency — not as a hedge against failure, but because good decisions require you to understand the alternatives you're choosing not to take.</p>
+        <p>People sometimes ask how I seem to know so much about a system or a situation I'm encountering for the first time. The answer is preparation, not intuition. I read everything available. I talk to the people who actually use the system before I make decisions about it. I build a mental model of the problem before I start designing the solution.</p>
+        <p>The A/B/C plan isn't pessimism. It's how you stay in front of a crisis instead of reacting to it.</p>
+      </div>
+
+      <div class="think-section">
+        <div class="think-label">Craft</div>
+        <h2 class="think-heading">Build the thing worth building.</h2>
+        <p>I built the desk I work at. I built the table my family eats dinner on — over a long weekend, because my wife said it couldn't be done in a weekend. Eight years later, it's still our table.</p>
+        <p>I don't build fast and disposable. I build things designed to still be standing years later, whether that's a data warehouse, a kitchen table, or a public health AI platform. The question I ask before I start any project is the same one I ask in my woodshop: is this worth building? If the answer is yes, I'm going to build it right. No shortcuts that create future failures. No workarounds that someone else has to clean up.</p>
+      </div>
+
+      <div class="think-section">
+        <div class="think-label">Equity</div>
+        <h2 class="think-heading">Equity is a design constraint. Not a feature.</h2>
+        <p>Early in my career, I learned that a person's zip code is a better predictor of their health outcomes than almost anything else. That reframed how I think about every system I build. Equity isn't something you add at the end to comply with requirements. It's a constraint you design around from the beginning — or you've already failed the people who need the system most.</p>
+        <p>At Lake County, designing the AllVax system meant working with church groups, Latinx community leaders, and disability advocates before we wrote a line of code. It meant building multilingual, ADA-accessible, screen-reader compatible from day one — not because a compliance checklist required it, but because the alternative was a system that worked for some people and not others.</p>
+        <p>The systems that serve everyone require you to design for the people most likely to fall through the cracks. That's where I start.</p>
+      </div>
+
     </div>
-
-    <!-- Process tab bar -->
-    <div class="os-tabs" role="tablist">
-      <div class="os-tab active" role="tab" data-pane="duality" aria-selected="true">
-        <span class="os-tab-dot"></span>
-        <span class="os-tab-pid">PID:01</span>
-        <span class="os-tab-name">The Duality</span>
-      </div>
-      <div class="os-tab" role="tab" data-pane="origin" aria-selected="false">
-        <span class="os-tab-dot"></span>
-        <span class="os-tab-pid">PID:02</span>
-        <span class="os-tab-name">Origin</span>
-      </div>
-      <div class="os-tab" role="tab" data-pane="preparation" aria-selected="false">
-        <span class="os-tab-dot"></span>
-        <span class="os-tab-pid">PID:03</span>
-        <span class="os-tab-name">Preparation</span>
-      </div>
-      <div class="os-tab" role="tab" data-pane="craft" aria-selected="false">
-        <span class="os-tab-dot"></span>
-        <span class="os-tab-pid">PID:04</span>
-        <span class="os-tab-name">Craft</span>
-      </div>
-      <div class="os-tab" role="tab" data-pane="equity" aria-selected="false">
-        <span class="os-tab-dot"></span>
-        <span class="os-tab-pid">PID:05</span>
-        <span class="os-tab-name">Equity</span>
-      </div>
-    </div>
-
-    <!-- Content area -->
-    <div class="os-content">
-
-      <!-- Sidebar -->
-      <div class="os-sidebar">
-        <div class="os-sidebar-label">Processes</div>
-        <div class="os-sidebar-item active" data-pane="duality">
-          <span class="os-sidebar-icon">⬡</span>
-          <span class="os-sidebar-text">The Duality</span>
-          <span class="os-sidebar-badge">●</span>
-        </div>
-        <div class="os-sidebar-item" data-pane="origin">
-          <span class="os-sidebar-icon">◎</span>
-          <span class="os-sidebar-text">Origin</span>
-          <span class="os-sidebar-badge">●</span>
-        </div>
-        <div class="os-sidebar-item" data-pane="preparation">
-          <span class="os-sidebar-icon">◈</span>
-          <span class="os-sidebar-text">Preparation</span>
-          <span class="os-sidebar-badge">●</span>
-        </div>
-        <div class="os-sidebar-item" data-pane="craft">
-          <span class="os-sidebar-icon">◇</span>
-          <span class="os-sidebar-text">Craft</span>
-          <span class="os-sidebar-badge">●</span>
-        </div>
-        <div class="os-sidebar-item" data-pane="equity">
-          <span class="os-sidebar-icon">◉</span>
-          <span class="os-sidebar-text">Equity</span>
-          <span class="os-sidebar-badge">●</span>
-        </div>
-      </div>
-
-      <!-- Main panel -->
-      <div class="os-panel">
-
-        <!-- DUALITY -->
-        <div class="os-pane active" id="pane-duality">
-          <div class="pane-header">
-            <div>
-              <div class="pane-process">process · the_duality.exec</div>
-              <h2 class="pane-heading">The executive who can't read the code is guessing. The engineer who's never run a budget is building in a vacuum.</h2>
-            </div>
-            <div class="pane-status">ACTIVE</div>
-          </div>
-          <div class="pane-body">
-            <div class="duality-split">
-              <div class="duality-card">
-                <div class="duality-card-label">Executive altitude</div>
-                <div class="duality-card-stat">$14.5M</div>
-                <div class="duality-card-text">Budget managed. 95-person reporting chain. 5 direct reports. Strategic plans, board presentations, policy decisions.</div>
-              </div>
-              <div class="duality-card">
-                <div class="duality-card-label">Architect altitude</div>
-                <div class="duality-card-stat">7 layers</div>
-                <div class="duality-card-text">Personally wrote the CloudFormation templates and Lambda functions for a HIPAA-compliant, multi-tenant AI platform on AWS.</div>
-              </div>
-            </div>
-            <p>Most health IT executives understand the strategy or the architecture. I've done both — at the same time.</p>
-            <p>I don't think those are different skill sets applied to different roles. I think they're the same fundamental skill — <strong>systems thinking</strong> — applied at different altitudes. When you've done both, you stop treating them as separate domains. You start seeing the connections between the budget decision and the architectural choice, between the policy and the data model, between the strategic plan and the API design.</p>
-            <p>That's what I mean when I say I've been on both sides of the table. I've been the CIO who needed the platform and couldn't find it. I've been the architect who built it. Those aren't two different people. They're the same lens, focused at different distances.</p>
-          </div>
-        </div>
-
-        <!-- ORIGIN -->
-        <div class="os-pane" id="pane-origin">
-          <div class="pane-header">
-            <div>
-              <div class="pane-process">process · origin.exec</div>
-              <h2 class="pane-heading">I started by studying how machines fail the people who operate them.</h2>
-            </div>
-            <div class="pane-status">ACTIVE</div>
-          </div>
-          <div class="pane-body">
-            <p>My career started in aviation human factors — specifically, how pilots and crew interact with systems that can kill them when they fail. That training never left. Every technology decision I make starts with the same question I learned to ask at Embry-Riddle: <strong>who is the human on the other end of this system, and where does it fail them?</strong></p>
-            <p>Whether it's an EHR that doesn't surface the right data at the point of care, a vaccine registration system that doesn't work in Spanish, or a public health platform that's technically HIPAA-compliant but practically unusable by the staff who run it — the failure mode is always the same. Someone built the system without understanding who would use it.</p>
-            <p>I've spent fifteen years building the other kind.</p>
-          </div>
-        </div>
-
-        <!-- PREPARATION -->
-        <div class="os-pane" id="pane-preparation">
-          <div class="pane-header">
-            <div>
-              <div class="pane-process">process · preparation.exec</div>
-              <h2 class="pane-heading">I don't walk into a room with one plan.</h2>
-            </div>
-            <div class="pane-status">ACTIVE</div>
-          </div>
-          <div class="pane-body">
-            <div class="abc-plan">
-              <div class="abc-card">
-                <div class="abc-letter">A</div>
-                <div class="abc-label">Primary</div>
-              </div>
-              <div class="abc-card">
-                <div class="abc-letter">B</div>
-                <div class="abc-label">Fallback</div>
-              </div>
-              <div class="abc-card">
-                <div class="abc-letter">C</div>
-                <div class="abc-label">Contingency</div>
-              </div>
-            </div>
-            <p>I prepare obsessively. I think through every question that will be asked before the meeting starts. I have a primary approach, a fallback, and a contingency — not as a hedge against failure, but because <strong>good decisions require you to understand the alternatives you're choosing not to take.</strong></p>
-            <p>People sometimes ask how I seem to know so much about a system or a situation I'm encountering for the first time. The answer is preparation, not intuition. I read everything available. I talk to the people who actually use the system before I make decisions about it. I build a mental model of the problem before I start designing the solution.</p>
-            <p>The A/B/C plan isn't pessimism. It's how you stay in front of a crisis instead of reacting to it.</p>
-          </div>
-        </div>
-
-        <!-- CRAFT -->
-        <div class="os-pane" id="pane-craft">
-          <div class="pane-header">
-            <div>
-              <div class="pane-process">process · craft.exec</div>
-              <h2 class="pane-heading">Build the thing worth building.</h2>
-            </div>
-            <div class="pane-status">ACTIVE</div>
-          </div>
-          <div class="pane-body">
-            <p>I built the desk I work at. I built the table my family eats dinner on — over a long weekend, because my wife said it couldn't be done in a weekend. Eight years later, it's still our table.</p>
-            <p>I don't build fast and disposable. I build things designed to still be standing years later, whether that's a data warehouse, a kitchen table, or a public health AI platform. The question I ask before I start any project is the same one I ask in my woodshop: <strong>is this worth building?</strong></p>
-            <p>If the answer is yes, I'm going to build it right. No shortcuts that create future failures. No workarounds that someone else has to clean up. The join either holds or it doesn't — and I'd rather spend the time to make it hold.</p>
-          </div>
-        </div>
-
-        <!-- EQUITY -->
-        <div class="os-pane" id="pane-equity">
-          <div class="pane-header">
-            <div>
-              <div class="pane-process">process · equity.exec</div>
-              <h2 class="pane-heading">Equity is a design constraint. Not a feature.</h2>
-            </div>
-            <div class="pane-status">ACTIVE</div>
-          </div>
-          <div class="pane-body">
-            <div class="pane-callout">
-              "A person's zip code is a better predictor of their health outcomes than almost anything else."
-            </div>
-            <p>That reframed how I think about every system I build. Equity isn't something you add at the end to comply with requirements. It's a constraint you design around from the beginning — <strong>or you've already failed the people who need the system most.</strong></p>
-            <p>At Lake County, designing the AllVax system meant working with church groups, Latinx community leaders, and disability advocates before we wrote a line of code. It meant building multilingual, ADA-accessible, screen-reader compatible from day one — not because a compliance checklist required it, but because the alternative was a system that worked for some people and not others.</p>
-            <p>The systems that serve everyone require you to design for the people most likely to fall through the cracks. That's where I start.</p>
-          </div>
-        </div>
-
-      </div><!-- /os-panel -->
-    </div><!-- /os-content -->
-
-    <!-- Status bar -->
-    <div class="os-statusbar">
-      <div class="os-statusbar-item">jmw-os <span>v15.0</span></div>
-      <div class="os-statusbar-item">processes: <span>5 active</span></div>
-      <div class="os-statusbar-item">uptime: <span>15 years</span></div>
-      <div class="os-statusbar-item">status: <span>running</span></div>
-    </div>
-
-  </div><!-- /os-shell -->
+  </div>
 </div>
 
 <div class="section--alt">
@@ -602,21 +116,6 @@
 <footer class="site-footer">
   <p>Jefferson McMillan-Wilhoit, MPH, MPA, CHCIO, CDH-E · <a href="mailto:jefferson@fandtlabs.com">jefferson@fandtlabs.com</a></p>
 </footer>
-
-<script>
-  const tabs = document.querySelectorAll('.os-tab');
-  const sidebarItems = document.querySelectorAll('.os-sidebar-item');
-  const panes = document.querySelectorAll('.os-pane');
-
-  function switchPane(id) {
-    tabs.forEach(t => { t.classList.toggle('active', t.dataset.pane === id); t.setAttribute('aria-selected', t.dataset.pane === id); });
-    sidebarItems.forEach(s => s.classList.toggle('active', s.dataset.pane === id));
-    panes.forEach(p => p.classList.toggle('active', p.id === 'pane-' + id));
-  }
-
-  tabs.forEach(tab => tab.addEventListener('click', () => switchPane(tab.dataset.pane)));
-  sidebarItems.forEach(item => item.addEventListener('click', () => switchPane(item.dataset.pane)));
-</script>
 
 </body>
 </html>

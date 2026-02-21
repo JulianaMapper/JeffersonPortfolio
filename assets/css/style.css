@@ -454,6 +454,7 @@ img { max-width: 100%; display: block; }
 
 /* ── ABOUT PAGE ─────────────────────────────────────────────────── */
 .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; align-items: start; }
+.about-grid > div:last-child { position: sticky; top: 72px; }
 .about-body p { font-size: 0.95rem; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
 .about-body p:last-child { margin-bottom: 0; }
 .about-body strong { color: var(--color-primary); font-weight: 600; }

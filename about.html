@@ -12,27 +12,45 @@
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: 260px 260px;
   gap: 8px;
   margin: 48px 0;
 }
-.photo-gallery img {
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
+.photo-item {
+  position: relative;
+  overflow: hidden;
   border-radius: 6px;
-  display: block;
 }
-.photo-gallery .photo-wide {
+.photo-item.photo-wide {
   grid-column: span 2;
-  aspect-ratio: 16/9;
 }
-.photo-caption {
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.photo-item:hover img {
+  transform: scale(1.03);
+}
+.photo-hover-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 14px 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
   font-size: 0.72rem;
-  color: var(--color-meta);
-  text-align: center;
-  margin-top: 4px;
+  color: #fff;
   font-style: italic;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.photo-item:hover .photo-hover-caption {
+  opacity: 1;
 }
 </style>
 </head>
@@ -132,25 +150,25 @@
 <div class="section">
   <div class="section-inner">
     <div class="photo-gallery">
-      <div class="photo-wide">
+      <div class="photo-item photo-wide">
         <img src="assets/images/presenting.jpeg" alt="Jefferson presenting to a room">
-        <div class="photo-caption">In the room — leading a strategy session.</div>
+        <div class="photo-hover-caption">In the room — leading a strategy session.</div>
       </div>
-      <div>
+      <div class="photo-item">
         <img src="assets/images/reading-chair.jpeg" alt="Jefferson reading with his baby">
-        <div class="photo-caption">The reading chair.</div>
+        <div class="photo-hover-caption">The reading chair.</div>
       </div>
-      <div>
-        <img src="assets/images/desk-headphones.jpeg" alt="Jefferson at his desk">
-        <div class="photo-caption">Deep work mode.</div>
+      <div class="photo-item">
+        <img src="assets/images/reading-book.jpeg" alt="Jefferson reading with his kids">
+        <div class="photo-hover-caption">No More Señora Min — a house favorite.</div>
       </div>
-      <div>
-        <img src="assets/images/zoo-daughter.jpeg" alt="Jefferson with his daughter at the zoo">
-        <div class="photo-caption">At the zoo with Josephine.</div>
+      <div class="photo-item">
+        <img src="assets/images/zoo-daughter.jpeg" alt="Jefferson with his daughter at the forest preserve">
+        <div class="photo-hover-caption">At the Lake County Forest Preserve with Josephine.</div>
       </div>
-      <div>
+      <div class="photo-item">
         <img src="assets/images/coding-baby.jpeg" alt="Jefferson coding with his baby on his lap">
-        <div class="photo-caption">Dual monitors, dual roles.</div>
+        <div class="photo-hover-caption">Dual monitors, dual roles.</div>
       </div>
     </div>
   </div>

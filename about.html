@@ -35,6 +35,23 @@
 .photo-item:hover img {
   transform: scale(1.03);
 }
+.photo-hover-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 14px 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+  font-size: 0.72rem;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.photo-item:hover .photo-hover-caption {
+  opacity: 1;
+}
 </style>
 </head>
 <body>
@@ -134,19 +151,24 @@
   <div class="section-inner">
     <div class="photo-gallery">
       <div class="photo-item photo-wide">
-        <img src="assets/images/presenting.jpeg" alt="Jefferson presenting to a room">
+        <img src="assets/images/presenting.jpeg" alt="Jefferson McMillan-Wilhoit standing at the front of a room, gesturing while leading a strategy session in front of a large display screen">
+        <div class="photo-hover-caption">In the room — leading a strategy session.</div>
       </div>
       <div class="photo-item">
-        <img src="assets/images/reading-chair.jpeg" alt="Jefferson reading with his baby">
+        <img src="assets/images/reading-chair.jpeg" alt="Jefferson sitting in an armchair reading a book aloud to his infant child who is resting on his lap">
+        <div class="photo-hover-caption">The reading chair.</div>
       </div>
       <div class="photo-item">
-        <img src="assets/images/reading-book.jpeg" alt="Jefferson reading with his kids">
+        <img src="assets/images/reading-book.jpeg" alt="Jefferson reading a picture book titled No More Señora Min to two young children sitting in his lap on a couch">
+        <div class="photo-hover-caption">No More Señora Min — a house favorite.</div>
       </div>
       <div class="photo-item">
-        <img src="assets/images/zoo-daughter.jpeg" alt="Jefferson with his daughter at the forest preserve">
+        <img src="assets/images/zoo-daughter.jpeg" alt="Jefferson sitting beside his young daughter Josephine outdoors at the Lake County Forest Preserve, both perched on large stone spheres with a textured wall behind them">
+        <div class="photo-hover-caption">At the Lake County Forest Preserve with Josephine.</div>
       </div>
       <div class="photo-item">
-        <img src="assets/images/coding-baby.jpeg" alt="Jefferson coding with his baby on his lap">
+        <img src="assets/images/coding-baby.jpeg" alt="Jefferson working at a dual-monitor setup with his baby resting on his lap, both looking at the screens">
+        <div class="photo-hover-caption">Dual monitors, dual roles.</div>
       </div>
     </div>
   </div>

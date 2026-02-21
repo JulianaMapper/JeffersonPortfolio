@@ -83,9 +83,46 @@ function initCyclingPhrase() {
   }, 2800);
 }
 
+// ── Cycling quote carousel ───────────────────────────────────────
+function initQuoteCarousel() {
+  const carousel = document.getElementById('quote-carousel');
+  if (!carousel) return;
+  const slides = carousel.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('#quote-dots .testimonial-dot');
+  let current = 0;
+  let timer;
+
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = idx;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  function startTimer() {
+    timer = setInterval(next, 5000);
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      goTo(parseInt(dot.dataset.idx));
+      startTimer();
+    });
+  });
+
+  startTimer();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initReadingProgress();
   initFadeIns();
   initCounters();
   initCyclingPhrase();
+  initQuoteCarousel();
 });

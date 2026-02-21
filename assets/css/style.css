@@ -691,9 +691,8 @@ img { max-width: 100%; display: block; }
   max-width: var(--max-w);
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 12px;
 }
 .domain-label {
   font-size: 0.6rem;
@@ -701,8 +700,11 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--color-gray-mid);
-  margin-right: 6px;
-  flex-shrink: 0;
+}
+.domain-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .domain-pill {
   display: inline-flex;
